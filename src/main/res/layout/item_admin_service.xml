@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners_dark_blue_stroke">
+
+
+        <TextView
+            android:id="@+id/Name_service_item_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center"
+            android:text="ServiceName"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Price_service_item_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:text="Pret"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/Name_service_item_admin"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <EditText
+            android:id="@+id/time_service_item_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:text="Time"
+
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/Price_service_item_admin"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <Button
+            android:id="@+id/Remove_service_item_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/remove_btn_style"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center"
+            android:text="@string/Remove_service_item_admin"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GestionateSpecialists_service_item_admin" />
+
+        <Button
+            android:id="@+id/Change_service_item_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedcorners_dark_blue"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center"
+            android:text="@string/Change_service_item_admin"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time_service_item_admin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Preț"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:fontFamily="@font/futura_medium"
+
+            app:layout_constraintStart_toEndOf="@+id/Name_service_item_admin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Timp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:fontFamily="@font/futura_medium"
+
+            app:layout_constraintStart_toEndOf="@+id/Price_service_item_admin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/GestionateSpecialists_service_item_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedcorners_dark_blue"
+            android:fontFamily="@font/futura_medium"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:text="Gestionează Specialiști"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time_service_item_admin"
+            app:layout_constraintTop_toBottomOf="@+id/Change_service_item_admin" />
+
+        <Spinner
+            android:id="@+id/SpecialistsSpinner_service_item_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Remove_service_item_admin"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/futura_medium"
+            android:text="Specialiști"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/SpecialistsSpinner_service_item_admin"
+            app:layout_constraintStart_toStartOf="@+id/SpecialistsSpinner_service_item_admin"
+            app:layout_constraintTop_toBottomOf="@+id/Price_service_item_admin"
+            app:layout_constraintVertical_bias="0.98" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
